@@ -85,6 +85,9 @@
 						</div>
 					</div>
 					<?php } ?>
+						<?php
+		if( is_login() ) {
+	  ?>
 						<div class="list-w2">
 							<div class="list" id="nav-add-type">
 						<a>
@@ -99,6 +102,7 @@
 						</a>
 					</div>	
 						</div>
+						<?php } ?>
 				
 			</div>
 
@@ -228,7 +232,8 @@
 									<?php echo $link_property; ?>
 							</div>
 							<?php } ?>
-
+								
+								
 							<div class="list kongs"></div>
 							<div class="list kongs"></div>
 							<div class="list kongs"></div>
@@ -249,6 +254,9 @@
 
 		</footer>
 
+	<?php
+		if( is_login() ) {
+	  ?>
 		<!--组件引入-添加分类-->
 		<?php include ("type_add.html"); ?>
 		<!--组件引入-编辑分类-->
@@ -257,7 +265,9 @@
 		<?php include ("links_add.html"); ?>
 		<!--组件引入-编辑书签-->
 		<?php include ("links_edit.html"); ?>
-
+		<!--组件引入-图标列表-->
+		<?php include ("icons.html"); ?>
+  <?php } ?>
 		<!--JQ 3.5.1-->
 		<script src="templates/<?php echo $template; ?>/js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<!--layui v2.7.6-->
@@ -292,6 +302,9 @@
 			</script>
 			<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
 			<!--天气代码替换处 E-->
+			<?php
+		if( is_login() ) {
+	  ?>
 		<script type="text/javascript">
 			layui.use(['form', 'dropdown'], function() {
 				var $ = layui.$,
@@ -338,7 +351,7 @@
 										}
 										if(data.code == 0 || data.code == 200) {
 											form.val("type_edit", data.data);
-
+											$('.font_icon_show i').attr('class',data.data.font_icon)
 											$("#categoryList span").each(function(i, o) {
 												if($(this).data('fid') == data.data.fid) {
 													$(this).addClass('hover').siblings().removeClass('hover');
@@ -469,6 +482,7 @@
 				});
 			});
 		</script>
+		<?php } ?>
 	</body>
 
 </html>

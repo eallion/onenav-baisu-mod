@@ -18,6 +18,11 @@ function CurrentDate() {
 CurrentTime();
 CurrentDate();
 
+$(".siteList ").click(function() {
+	var openurl = $(this).data('url');
+	open_links(openurl);
+});
+
 //二级菜单
 $(".type-list .list").click(function() {
 	$(this).addClass("hover").siblings().removeClass('hover');

@@ -192,21 +192,52 @@ layui.use(['form', 'dropdown'], function() {
 		bgcolor: '#393D49',
 		click: function(type) {
 			if(type === 'bar1') {
-				layer.open({
-					type: 1,
-					title: '添加书签',
-					shadeClose: true,
-					shade: 0.8,
-					area: ['460px'],
-					content: $('#component_links_add'), //iframe的url
-					success: function() {
-						$('#component_links_add .list-type span').eq(0).addClass('hover');
-						var addfid = $('#component_links_add .list-type span').eq(0).data('fid');
-						$('input#fid').val(addfid);
-					}
-				});
+				if($('#component_type_edit').length > 0) {
+					layer.open({
+						type: 1,
+						title: '添加书签',
+						shadeClose: true,
+						shade: 0.8,
+						area: ['460px'],
+						content: $('#component_links_add'), //iframe的url
+						success: function() {
+							$('#component_links_add .list-type span').eq(0).addClass('hover');
+							var addfid = $('#component_links_add .list-type span').eq(0).data('fid');
+							$('input#fid').val(addfid);
+						}
+					});
+					return;
+				}
+				post_error()
+
 			}
 		}
+	});
+
+	//选择图标
+	function select_icons() {
+		$('.select_icons').click(function() {
+			layer.open({
+				type: 1,
+				title: '选择图标',
+				shadeClose: true,
+				shade: 0.8,
+				area: ['534px'],
+				content: $('#component_icons_list'), //iframe的url
+				success: function() {
+
+				}
+			});
+		})
+	}
+	select_icons();
+	//给父页面传值
+	$('#component_icons_list li').on('click', function() {
+		var icon_name = $(this).attr('title');
+		console.log(icon_name);
+		parent.$('input#font_icon').val(icon_name);
+		$('.font_icon_show i').attr('class', 'fa ' + icon_name)
+		layer.close(layer.index);
 	});
 
 });
@@ -274,6 +305,7 @@ function del_links(id) {
 }
 //打开书签
 function open_links(url) {
+	console.log(url)
 	window.open(url);
 }
 

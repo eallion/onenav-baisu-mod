@@ -861,6 +861,7 @@ footer a:hover {
 	color: #1E9FFF;
 	display: block;
 	font-size: 18px;
+	margin-top: 2px;
 }
 
 .component-main .list input.text {
@@ -1030,4 +1031,58 @@ footer a:hover {
 
 .component-main .list-btn02 .btn02 {
 	width: 63%;
+}
+.component-main .list.list-icons{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.component-main .list.list-icons .select_icons{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 6px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #FF5722;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.ul-icon-list{
+	height: 500px;
+	padding: 10px;
+	overflow-y: auto;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.ul-icon-list li{
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	background-color: #eee;
+	margin: 3px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.ul-icon-list li i{
+	display: block;
+	line-height: 45px;
+	font-size: 20px;
+}
+.ul-icon-list li .name{
+	display: none;
+}
+.ul-icon-list li:hover{
+	background-color: #1E9FFF;
+	color: #FFFFFF;
 }

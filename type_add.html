@@ -7,13 +7,14 @@
 			<span class="icon"><i class="layui-icon layui-icon-edit"></i></span>
 			<input type="text" class="text" name="name" id="name" lay-verify="required" placeholder="请输入分类名称" autocomplete="off">
 		</div>
-		<div class="list">
-			<span class="icon"><i class="fa fa-book"></i></span>
+		<div class="list list-icons">
+			<span class="icon font_icon_show"><i class="fa fa-book"></i></span>
 			<input type="text" class="text" name="font_icon" id="font_icon" required="" lay-verify="required" placeholder="请输入分类图标" autocomplete="off" value="fa fa-book">
+			<div class="select_icons">选择图标</div>
 		</div>
 		<div class="list-type" id="categoryList">
 			<input type="hidden" name="fid" id="fid" value="0" />
-					<span class="hover" data-fid = "<?php echo $category['id']; ?>">一级分类</span>
+					<span class="hover" data-fid = "0">一级分类</span>
         <?php foreach ($categorys as $key => $category) { ?>
 					<span data-fid="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></span>
         <?php } ?>
