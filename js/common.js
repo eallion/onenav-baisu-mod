@@ -23,6 +23,13 @@ $(".siteList ").click(function() {
 	open_links(openurl);
 });
 
+$("a.typeList").click(function() {
+	$("html, body").animate({
+		scrollTop: $($(this).attr("href")).offset().top - 20 + "px"
+	}, 500);
+	return false;
+});
+
 //二级菜单
 $(".type-list .list").click(function() {
 	$(this).addClass("hover").siblings().removeClass('hover');
