@@ -134,7 +134,7 @@
 						</div>
 						<div class="btn">
 							<div class="btn-s" id="seaech-to">
-								<img src="https://1.baisu.chat/templates/baisuTwo/images/icon/baidu.svg" />百度搜索
+								<img src="templates/<?php echo $template; ?>/images/baidu.svg" />百度搜索
 							</div>
 						</div>
 					</div>
@@ -271,7 +271,7 @@
 		<!--clipboard.js-->
 		<script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
 		<!--holmes.js-->
-		<script src="https://1.baisu.chat/templates/baisuTwo/js/holmes.js" type="text/javascript" charset="utf-8"></script>
+		<script src="templates/<?php echo $template; ?>/js/holmes.js" type="text/javascript" charset="utf-8"></script>
 		<!--common.js-->
 		<script src="templates/<?php echo $template; ?>/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="templates/<?php echo $template; ?>/js/admin.js" type="text/javascript" charset="utf-8"></script>
