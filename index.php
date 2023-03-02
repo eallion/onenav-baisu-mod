@@ -115,7 +115,7 @@
 		if( is_login() ) {
 	  ?>
 						<a href="/index.php?c=admin" target="_blank">
-							<p class="t1">百素导航</p>
+							<p class="t1"><?php echo $site['title']; ?></p>
 							<p class="t2">进入后台管理</p>
 						</a>
 						<?php }else{ ?>
