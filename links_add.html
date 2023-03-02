@@ -1,0 +1,39 @@
+<div class="component-main" id="component_links_add" style="display: none;">
+	<div class="title">
+		添加书签
+	</div>
+	<form class="layui-form list-w" lay-filter="links_add">
+		<input type="hidden" name="fid" id="fid" value="" />
+		<div class="list">
+			<span class="icon"><i class="layui-icon layui-icon-senior"></i></span>
+			<input type="text" class="text" name="url" id="url" required="" lay-verify="required|url" placeholder="请输入书签链接" autocomplete="off">
+		</div>
+		<div class="list">
+			<span class="icon"><i class="layui-icon layui-icon-edit"></i></span>
+			<input type="text" class="text" name="title" id="title" required="" lay-verify="required" placeholder="请输入标签名称" autocomplete="off">
+		</div>
+		<div class="list-type" id="categoryList">
+        <?php foreach ($categorys as $key => $category) { ?>
+					<span data-fid="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></span>
+        <?php } ?>
+		</div>
+		<div class="list list-2">
+			<div class="li">
+				<span>权重：</span>
+				<input type="text" class="num" name="weight" min="0" max="999" value="0" required="" lay-verify="required|number" autocomplete="off">
+			</div>
+			<div class="li">
+				私有：
+				<input type="checkbox" name="property" id="property" lay-skin="switch" lay-text="是|否">
+			</div>
+		</div>
+		<div class="list">
+			<textarea name="description" id="description" placeholder="请输入书签描述（选填）"></textarea>
+		</div>
+		<div class="list list-btn02">
+			<button id="get_links_info" class="btn01" >获取链接信息</button>
+			<button lay-submit="" lay-filter="links_add" class="btn02">添加链接</button>
+		</div>
+
+	</form>
+</div>
