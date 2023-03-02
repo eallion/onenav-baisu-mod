@@ -1,5 +1,6 @@
 # OneNav主题
 onenav导航的主题
+支持分类和链右键操作。
 ![输入图片说明](https://images.gitee.com/uploads/images/2022/0226/233837_3fa5c693_1718725.png "屏幕截图.png")
 ![输入图片说明](https://images.gitee.com/uploads/images/2022/0226/233859_ed83bce1_1718725.png "屏幕截图.png")
 
