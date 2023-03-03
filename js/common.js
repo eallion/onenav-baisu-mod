@@ -27,11 +27,11 @@ $("a.typeList").click(function() {
 	$("html, body").animate({
 		scrollTop: $($(this).attr("href")).offset().top - 20 + "px"
 	}, 500);
-	return false;
 });
 
 //二级菜单
 $(".type-list .list").click(function() {
+	console.log('222');
 	$(this).addClass("hover").siblings().removeClass('hover');
 	$(this).find('.list-sub').slideDown();
 	$(this).siblings().find('.list-sub').slideUp();
@@ -102,3 +102,10 @@ function keyClick() {
 
 }
 keyClick();
+
+
+//打开书签
+function open_links(url) {
+	console.log(url)
+	window.open(url);
+}

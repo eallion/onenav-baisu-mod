@@ -108,7 +108,7 @@
 
 			<div class="user-info">
 				<div class="pic">
-					<a href="/"><img src="templates/baisu/images/touxiang.png"></a>
+					<a href="/"><img src="templates/<?php echo $template; ?>/images/touxiang.png"></a>
 				</div>
 				<div class="text">
 					<?php
@@ -250,7 +250,7 @@
 			© 2023 百素BaiSu，Powered by
 			<a target="_blank" href="https://github.com/helloxz/onenav" title="简约导航/书签管理器" rel="nofollow">OneNav</a>，
 			 The theme author is
-			<a href="https://gitee.com/baisucode/onenav" target="_blank">BaiSu</a>
+			<a href="https://gitee.com/baisucode/onenav-baisu" target="_blank">BaiSu</a>
 
 		</footer>
 
@@ -284,7 +284,11 @@
 		<script src="templates/<?php echo $template; ?>/js/holmes.js" type="text/javascript" charset="utf-8"></script>
 		<!--common.js-->
 		<script src="templates/<?php echo $template; ?>/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<?php
+		if( is_login() ) {
+	  ?>
 		<script src="templates/<?php echo $template; ?>/js/admin.js" type="text/javascript" charset="utf-8"></script>
+		<?php } ?>
 <!--天气代码替换处 S-->
 			<script type="text/javascript">
 				WIDGET = {

@@ -303,11 +303,7 @@ function del_links(id) {
 		post_error()
 	});
 }
-//打开书签
-function open_links(url) {
-	console.log(url)
-	window.open(url);
-}
+
 
 //复制书签链接
 function copy_link_url(div, links) {
