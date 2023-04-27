@@ -1176,3 +1176,31 @@
  .item.code {
      white-space: nowrap !important;
  }
+ 
+ @media only screen and (max-width: 1366px) {
+    .navlist-main {
+      display: none;
+    }
+    .weather-main {
+      display: none;
+    }
+    .header-main .header-search {
+      width: 100%;
+    }
+    .index-main {
+      padding: 0;
+    }
+    .site-main-li .site-list .list {
+      width: 33%;
+    }
+    .header-main .seaech-main .input {
+      width: 65%;
+    }
+    .header-main .seaech-main .btn {
+      width: 25%;
+    }
+    .header-main .seaech-main .btn-s {
+      width: 100%;
+    }
+  }
+  
