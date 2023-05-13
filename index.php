@@ -273,13 +273,13 @@
 		<!--layui v2.7.6-->
 		<script src="templates/<?php echo $template; ?>/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 		<!--Day.js-->
-		<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+		<script src="templates/<?php echo $template; ?>/js/dayjs.min.js"></script>
 		<!--lunar.js-->
-		<script src="https://unpkg.com/lunar-javascript@1.2.37/lunar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="templates/<?php echo $template; ?>/js/lunar.min.js" type="text/javascript" charset="utf-8"></script>
 		<!--axios.js-->
-		<script src="https://unpkg.com/axios/dist/axios.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="templates/<?php echo $template; ?>/js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 		<!--clipboard.js-->
-		<script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+		<script src="templates/<?php echo $template; ?>/js/clipboard.min.js"></script>
 		<!--holmes.js-->
 		<script src="templates/<?php echo $template; ?>/js/holmes.js" type="text/javascript" charset="utf-8"></script>
 		<!--common.js-->
