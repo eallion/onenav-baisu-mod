@@ -24,7 +24,16 @@
 	</head>
 
 	<body>
-
+<div class="wap-header">
+	<div class="logo">
+				<a href="/">
+					<?php echo $site['title']; ?>
+				</a>
+			</div>
+			<div class="wap-menu">
+				<i class="sub layui-icon layui-icon-app"></i>
+			</div>
+</div>
 		<div class="navlist-main">
 			<div class="logo">
 				<a href="/">
@@ -214,7 +223,7 @@
 							<div class="list siteList" data-id="<?php echo $link['id']; ?>" data-url="<?php echo $url; ?>" data-links="<?php echo $link['url']; ?>">
 								<!-- 网站图标显示方式 -->
 								<?php if( $theme_config->favicon == "online") { ?>
-								<img src="https://favicon.rss.ink/v1/<?php echo base64($link['url']); ?>" class="icon" />
+								<img src="https://favicon.png.pub/v1/<?php echo base64($link['url']); ?>" class="icon" />
 								<?php }else{ ?>
 								<img src="/index.php?c=ico&text=<?php echo $link['title']; ?>" class="icon" />
 								<?php } ?>

@@ -103,9 +103,13 @@ function keyClick() {
 }
 keyClick();
 
-
 //打开书签
 function open_links(url) {
 	console.log(url)
 	window.open(url);
 }
+
+//手机端
+$('.wap-menu').click(function() {
+	$(".navlist-main").toggle();
+});
