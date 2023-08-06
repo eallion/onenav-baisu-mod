@@ -1,6 +1,7 @@
 {
-    "full_width_mode": "off",
-    "full_width_modes": "off",
-    "link_description": "hide",
-    "favicon": "online"
+    "full_width_mode": "on",
+    "full_width_modes": "on",
+    "link_description": "show",
+    "favicon": "online",
+    "memos_api": ""
 }

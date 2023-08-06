@@ -1,21 +1,22 @@
 {
-	"name": "BaiSu",
-	"description": "OneNav主题BaiSu",
-	"homepage": "https:\/\/www.xiaoz.me",
-	"help_url": "https://dwz.ovh/gnae4",
-	"version": "2.0.0",
-	"update": "2023\/03\/01",
-	"author": "百素BaiSu<1099116749@qq.com>",
-	"screenshot": "https:\/\/img.rss.ink\/imgs\/2022\/03\/42ed3ef2c4a50f6d.png",
-	"demo": "",
-	"require": {
-		"min": "0.9.26",
-		"max": ""
-	},
-	"config": {
-		"full_width_mode": "off",
-		"full_width_modes": "off",
-		"link_description": "show",
-		"favicon": "online"
-	}
+    "name": "BaiSu",
+    "description": "OneNav主题BaiSu",
+    "homepage": "https:\/\/www.xiaoz.me",
+    "help_url": "https://dwz.ovh/gnae4",
+    "version": "2.0.0",
+    "update": "2023\/03\/01",
+    "author": "百素BaiSu<1099116749@qq.com>",
+    "screenshot": "https:\/\/img.rss.ink\/imgs\/2022\/03\/42ed3ef2c4a50f6d.png",
+    "demo": "",
+    "require": {
+        "min": "0.9.26",
+        "max": ""
+    },
+    "config": {
+        "full_width_mode": "off",
+        "full_width_modes": "off",
+        "link_description": "show",
+        "favicon": "online",
+        "memos_api": ""
+    }
 }
