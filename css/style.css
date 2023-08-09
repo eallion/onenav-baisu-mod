@@ -739,6 +739,11 @@ a {
     transition: 0.3s all;
 }
 
+.site-main-li .site-list .list img {
+    width: 20px;
+    height: 20px;
+}
+
 .site-main-li .site-list .list.visible {
     display: flex;
 }

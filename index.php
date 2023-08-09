@@ -218,9 +218,15 @@
                             <div class="list siteList" data-id="<?php echo $link['id']; ?>" data-url="<?php echo $url; ?>" data-links="<?php echo $link['url']; ?>">
                                 <!-- 网站图标显示方式 -->
                                 <?php if( $theme_config->favicon == "online") { ?>
-                                <img src="https://favicon.png.pub/v1/<?php echo base64($link['url']); ?>" class="icon" />
-                                <?php }else{ ?>
-                                <img src="/index.php?c=ico&text=<?php echo $link['title']; ?>" class="icon" />
+                                    <?php 
+                                        if (!empty($link['font_icon'])) { ?>
+                                            <img src="<?php echo $link['font_icon']; ?>" />
+                                    <?php 
+                                        } else { ?>
+                                            <img src="https://favicon.png.pub/v1/<?php echo base64($link['url']); ?>" class="icon" />
+                                    <?php } ?>
+                                <?php } else { ?>
+                                    <img src="/index.php?c=ico&text=<?php echo $link['title']; ?>" class="icon" />
                                 <?php } ?>
 
                                 <p class="title">
@@ -288,7 +294,7 @@
         <script src="templates/<?php echo $template; ?>/js/holmes.js" type="text/javascript" charset="utf-8"></script>
         <!--common.js-->
         <script src="templates/<?php echo $template; ?>/js/common.js" type="text/javascript" charset="utf-8"></script>
-        <script>
+    <script>
         // 远程 JSON API 地址
         let jsonUrl = "https://api.eallion.com/gotosocial/api/v1/accounts/01RVAVVGAPXR989VKK1BQV6BFS/statuses?limit=10";
 
@@ -296,12 +302,12 @@
         (() => {
             window.Lately = new function () {
                 this.lang = {
-                    second: "秒",
-                    minute: "分钟",
-                    hour: "小时",
-                    day: "天",
-                    month: "个月",
-                    year: "年",
+                    second: " 秒",
+                    minute: " 分钟",
+                    hour: " 小时",
+                    day: " 天",
+                    month: " 个月",
+                    year: " 年",
                     ago: "前",
                     error: "NaN"
                 };
@@ -381,7 +387,7 @@
             var simpleText = html.replace(htmlTags, '');
             return simpleText;
         }
-        </script>
+    </script>
         <script async defer data-website-id="911b228b-61ed-42b4-b110-0c30a8cef662" src="https://api.eallion.com/umami/69d6ffe.js?v=2.1.0" data-host-url="https://a.eallion.com" data-domains="s.eallion.com"></script>
         <?php
         if( is_login() ) {
