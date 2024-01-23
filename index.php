@@ -278,25 +278,25 @@
         <!--组件引入-图标列表-->
         <?php include ("icons.html"); ?>
   <?php } ?>
-        <!--JQ 3.5.1 to 3.6.4-->
-        <script src="https://cdn.staticfile.org/jquery/3.6.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-        <!--layui v2.7.6-->
-        <script src="https://cdn.staticfile.org/layui/2.7.6/layui.min.js" type="text/javascript" charset="utf-8"></script>
+        <!--JQ 3.7.1-->
+        <script src="templates/<?php echo $template; ?>/js/jquery.min.js?v=3.7.1" type="text/javascript" charset="utf-8"></script>
+        <!--layui v2.9.4 -->
+        <script src="templates/<?php echo $template; ?>/layui/layui.js?v=2.9.4" type="text/javascript" charset="utf-8"></script>
         <!--Day.js-->
-        <!--<script src="https://cdn.staticfile.org/dayjs/1.11.7/dayjs.min.js"></script>-->
+        <!--<script src="templates/<?php echo $template; ?>/js/dayjs.min.js"></script>-->
         <!--lunar.js-->
-        <!--<script src="https://cdn.staticfile.org/lunar-javascript/1.3.4/lunar.min.js" type="text/javascript" charset="utf-8"></script>-->
+        <!--<script src="templates/<?php echo $template; ?>/js/lunar.min.js" type="text/javascript" charset="utf-8"></script>-->
         <!--axios.js-->
-        <script src="https://cdn.staticfile.org/axios/1.3.5/axios.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="templates/<?php echo $template; ?>/js/axios.min.js?v=1.6.5" type="text/javascript" charset="utf-8"></script>
         <!--clipboard.js-->
-        <script src="https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js"></script>
+        <script src="templates/<?php echo $template; ?>/js/clipboard.min.js"></script>
         <!--holmes.js-->
         <script src="templates/<?php echo $template; ?>/js/holmes.js" type="text/javascript" charset="utf-8"></script>
         <!--common.js-->
         <script src="templates/<?php echo $template; ?>/js/common.js" type="text/javascript" charset="utf-8"></script>
     <script>
         // 远程 JSON API 地址
-        let jsonUrl = "https://api.eallion.com/gotosocial/api/v1/accounts/01RVAVVGAPXR989VKK1BQV6BFS/statuses?limit=10";
+        let jsonUrl = "https://api.eallion.com/mastodon/api/v1/accounts/111136231674527355/statuses?limit=10&exclude_replies=true&exclude_reblogs=true";
 
         // 相对时间插件 2.5.2 https://tokinx.github.io/lately/
         (() => {
@@ -388,7 +388,6 @@
             return simpleText;
         }
     </script>
-        <script async defer data-website-id="911b228b-61ed-42b4-b110-0c30a8cef662" src="https://api.eallion.com/umami/69d6ffe.js?v=2.1.0" data-host-url="https://a.eallion.com" data-domains="s.eallion.com"></script>
         <?php
         if( is_login() ) {
       ?>
